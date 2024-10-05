@@ -1,14 +1,16 @@
 'use client'
 
-import { useState } from "react";
+import { profileContext } from "@/context/ProfileContext";
+import { useContext, useState } from "react";
 
 const CreateProfileForm = () => {
 
-    const [userName, setUserName] = useState(null)
-    const [email, setEmail] = useState(null)
-    const [age, setAge] = useState(null)
-    const [gender, setGender] = useState(null)
-    const [interests, setInterests] = useState('')
+    // const [userName, setUserName] = useState(null)
+    // const [email, setEmail] = useState(null)
+    // const [age, setAge] = useState(null)
+    // const [gender, setGender] = useState(null)
+    // const [interests, setInterests] = useState('')
+    const {setUserName, setEmail, setAge, setGender, setInterests} = useContext(profileContext)
 
     const ChangeHandeler = (e) => {
         const {value, id} = e.target;

@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { profileContext } from '@/context/ProfileContext';
+import { useContext, useState } from 'react';
 
 export default function ProfileHeaderFirst() {
-  const [banner, setBanner] = useState(null); 
-  const [profilePic, setProfilePic] = useState(null); 
+  // const [banner, setBanner] = useState(null); 
+  // const [profilePic, setProfilePic] = useState(null); 
+  const {setBanner, setProfilePic} = useContext(profileContext)
   const [previewBannerUrl, setPreviewBannerUrl] = useState('/image.png'); 
   const [previewProfileUrl, setPreviewProfileUrl] = useState('/avatar.png'); 
+
 
   // Function to handle image upload
   const HandleBannerChange = (e) => {
