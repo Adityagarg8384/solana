@@ -24,11 +24,11 @@ export default function ProfileHeaderFirst() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4" style={{position: 'relative', margin: '0 0 100px 0'}}>
+    <div className="flex flex-col items-center justify-center w-full" style={{position: 'relative', margin: '0 0 100px 0'}}>
 
-      <label className="cursor-pointer bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+      <label className="cursor-pointer text-white py-2 px-4 w-full rounded-lg shadow-md">
         {previewBannerUrl && (
-            <div className="mt-6 w-[200px] aspect-5/3">
+            <div className="mt-6">
             <img
                 src={previewBannerUrl}
                 alt="Image Preview"
@@ -47,13 +47,13 @@ export default function ProfileHeaderFirst() {
 
       {/* profile pic */}
       <div className='flex flex-col' style={{position: 'absolute', bottom: '-75px', left: '20px'}}>
-        <label className="cursor-pointer bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+        <label className="cursor-pointer text-white py-2 px-4 rounded-lg">
             {previewBannerUrl && (
-                <div className="mt-6 w-[200px] aspect-5/3">
+                <div className="">
                 <img
                     src={previewProfileUrl}
                     alt="Image Preview"
-                    className="border w-[100px] h-[100px] shadow-md"
+                    className=""
                     style={{height:'150px', width: '150px', borderRadius:'100%'}}
                 />
                 </div>
