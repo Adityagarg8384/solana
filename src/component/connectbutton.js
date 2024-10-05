@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 const Connectbutton = () => {
-    const { publicKey, wallet, connect, disconnect } = useWallet();
+    const { publicKey, disconnect } = useWallet();
     const [userPublicKey, setUserPublicKey] = useState(null);
 
     useEffect(() => {
@@ -13,20 +12,6 @@ const Connectbutton = () => {
             console.log(`User connected with public key: ${publicKey.toString()}`);
         }
     }, [publicKey]);
-
-    const handleConnectWallet = async () => {
-        if (!wallet || !publicKey) {
-            try {
-                await connect();
-            } catch (error) {
-                if (error instanceof WalletNotConnectedError) {
-                    console.error('Wallet not connected');
-                } else {
-                    console.error('Error connecting to wallet:', error);
-                }
-            }
-        }
-    };
 
     const handleDisconnect = () => {
         disconnect();
@@ -37,9 +22,7 @@ const Connectbutton = () => {
         <div>
             <h1>Solana Wallet Connect Example</h1>
 
-            {!publicKey && (
-                <button onClick={handleConnectWallet}>Connect Wallet</button>
-            )}
+            <WalletMultiButton />
 
             {publicKey && (
                 <div>
@@ -48,7 +31,7 @@ const Connectbutton = () => {
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
 export default Connectbutton;
