@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      aspectRatio: {
+        '5/3': '5 / 3',
+      },
     },
   },
   plugins: [],
