@@ -2,8 +2,17 @@
 
 import CreateProfileForm from "@/components/profile-page/CreateProfileForm";
 import ProfileHeaderFirst from "@/components/profile-page/ProfileHeaderFirst";
+import { profileContext } from "@/context/ProfileContext";
+import { useContext } from "react";
 
 const profile = () => {
+
+    const {userName, email, age, gender, interests, banner, profilePic} = useContext(profileContext)
+
+    const submitHandeler = () => {
+        console.log(userName, email, age, gender, interests, banner, profilePic)
+    }
+
 
     //return this when the user is new (check from blockchain)
     return ( 
@@ -16,7 +25,7 @@ const profile = () => {
                     <CreateProfileForm/>
                     </div>
                 </div>
-                <button className="px-4 py-2 text-3xl bg-[#FFE502] rounded-lg font-sans">
+                <button onClick={submitHandeler} className="px-4 py-2 text-3xl bg-[#FFE502] rounded-lg font-sans">
                     Submit
                 </button>
             </div>

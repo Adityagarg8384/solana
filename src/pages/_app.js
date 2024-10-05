@@ -1,14 +1,18 @@
 import { Navbar } from "@/components/Navbar/navbar";
+import ProfileContextProvier from "@/context/ProfileContext";
 import "@/styles/globals.css";
 import NextTopLoader from "nextjs-toploader";
 
 export default function App({ Component, pageProps }) {
   return <>
-    <NextTopLoader 
+    <NextTopLoader
       color="#360185"
       height={4}
     />
     <Navbar />
-    <Component {...pageProps} />;
+    <ProfileContextProvier>
+      <Component {...pageProps} />
+    </ProfileContextProvier>;
   </>
 }
+
