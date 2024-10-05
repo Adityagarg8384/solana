@@ -16,13 +16,13 @@ const NavbarContent = () => {
         </div>
         <ul className="flex text-white text-xl gap-20 ml-48">
           <li className="cursor-pointer">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className="cursor-pointer">
-            <a href="/">Explore</a>
+            <Link href="/explore">Explore</Link>
           </li>
           <li className="cursor-pointer">
-            <a href="/">Academics</a>
+            <Link href="/academics">Academics</Link>
           </li>
         </ul>
       </div>
