@@ -11,7 +11,10 @@ const ProfileContextProvier = ({children}) => {
     const [banner, setBanner] = useState(null)
     const [profilePic, setProfilePic] = useState(null)
     const [formError, setFormError] = useState('')
-
+    const [createCourseImg, setCreateCourseImg] = useState(null)
+    const [courseVideo, setCourseVideo] = useState(null)
+    const [courseDescription, setCourseDescription] = useState(null)
+    const [courseCertificate, setCourseCertificate] =  useState(null)
 
     const value = {
         userName, 
@@ -29,7 +32,15 @@ const ProfileContextProvier = ({children}) => {
         profilePic,
         setProfilePic,
         formError,
-        setFormError
+        setFormError,
+        courseCertificate,
+        setCourseCertificate,
+        courseDescription,
+        setCourseDescription,
+        courseVideo,
+        setCourseVideo,
+        createCourseImg,
+        setCreateCourseImg
     }
 
     
