@@ -12,7 +12,7 @@ const UserCard = () => {
         "createdCourses": []    //assuming the same
     }   
 
-    return ( <div className="flex flex-col w-full translate-y-[-50px] gap-y-3 text-xl font-sans border border-gray-200 rounded-lg p-8 bg-gray-100">
+    return ( <div className="flex flex-col hover:scale-105 hover:shadow-xl transition-all ease-in-out w-full translate-y-[-50px] gap-y-3 text-xl font-sans border border-gray-200 rounded-lg p-8 bg-gray-100">
         <div className="flex justify-between items-center">
             <img src={dummyDetails['profilePic']} className="w-[100px] aspect-square" alt="Profile Pic"/>
             <span className="text-3xl">{dummyDetails["userName"]}</span>

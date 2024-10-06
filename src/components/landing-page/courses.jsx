@@ -1,12 +1,10 @@
-import { Card2 } from "./card2"
+import { Card2 } from "./card2";
 
 export const AboutCourses = () => {
     return (
-        <div className="flex flex-col justify-center items-center gap-10 mb-20 " >
-            <h2 className="text-3xl" >
-                Course Categories
-            </h2>
-            <div className="grid grid-cols-4 place-items-center gap-10" >
+        <div className="flex flex-col justify-center items-center gap-10 mb-20">
+            <h2 className="text-3xl">Course Categories</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-10">
                 <Card2
                     img={""}
                     title={"Digital Marketing"}
@@ -25,7 +23,7 @@ export const AboutCourses = () => {
                 <Card2
                     img={""}
                     title={"Programming"}
-                    about={"Learn coding language like python, C#, PHP etc..."}
+                    about={"Learn coding languages like Python, C#, PHP etc..."}
                 />
                 <Card2
                     img={""}
@@ -49,5 +47,5 @@ export const AboutCourses = () => {
                 />
             </div>
         </div>
-    )
-}
+    );
+};

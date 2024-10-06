@@ -10,6 +10,7 @@ const ProfileContextProvier = ({children}) => {
     const [interests, setInterests] = useState(null)
     const [banner, setBanner] = useState(null)
     const [profilePic, setProfilePic] = useState(null)
+    const [formError, setFormError] = useState('')
 
 
     const value = {
@@ -26,7 +27,9 @@ const ProfileContextProvier = ({children}) => {
         banner,
         setBanner,
         profilePic,
-        setProfilePic
+        setProfilePic,
+        formError,
+        setFormError
     }
 
     
