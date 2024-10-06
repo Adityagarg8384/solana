@@ -31,9 +31,9 @@ const CreatedCoursesSec = () => {
     
     
                     return(
-                        <div key={index} className="w-full p-1">
-                            <span className="text-black font-sans font-light text-3xl">{dummyCourse['courseName']}</span>
-                            <img src={dummyCourse['img']} className="w-full h-[300px] object-fill"  alt="course Image"/>
+                        <div key={index} className="w-full flex flex-col gap-y-2 p-1">
+                            <span className="text-black font-sans font-light text-3xl">{course}</span>
+                            <img src={dummyCourse['img']} className="w-full h-[300px] transition-all ease-in-out hover:scale-105 hover:shadow-xl object-fill"  alt="course Image"/>
                         </div>
                     )
                 })

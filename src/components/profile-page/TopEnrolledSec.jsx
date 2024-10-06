@@ -30,8 +30,8 @@ const TopEnrolledSec = () => {
 
 
                 return(
-                    <div key={index} className="relative w-full h-[180px] p-1">
-                        <img src={dummyCourse['img']} className="w-full h-[180px]"  alt="course Image"/>
+                    <div key={index} className="relative hover:h-[230px] w-full hover:font-bold  transition-all ease-in-out h-[180px] p-1">
+                        <img src={dummyCourse['img']} className="w-full hover:h-[230px] hover:shadow-xl h-[180px] transition-all ease-in-out"  alt="course Image"/>
                         <span className="absolute text-white font-sans text-3xl bottom-2 right-2">{dummyCourse['courseName']}</span>
                     </div>
                 )
