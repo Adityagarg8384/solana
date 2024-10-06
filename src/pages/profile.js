@@ -9,11 +9,13 @@ import TopEnrolledSec from "@/components/profile-page/TopEnrolledSec";
 import CreatedCoursesSec from "@/components/profile-page/CreaedCoursesSec";
 import UpdateProfileAndNft from "@/components/profile-page/UpdateProfileAndNft";
 import { useContext, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const profile = () => {
 
+    
     const {userName, email, age, gender, interests, banner, profilePic, setFormError, formError} = useContext(profileContext)
-
+    
     const submitHandeler = () => {
         if(userName === null || email === null || age === null || gender === null || interests === null){
             setFormError('fill in all the required field to proceed');
@@ -24,7 +26,7 @@ const profile = () => {
             console.log(userName, email, age, gender, interests, banner, profilePic)
         }
     }
-
+   
     useEffect(() => {}, [formError])
 
 

@@ -28,7 +28,7 @@ export const NavOverlay = () => {
     };
 
     const handleCreateCourseClick = () => {
-        router.push(`/createcourse?address=${walletAddress}`);
+        router.push(`/createCourse?address=${walletAddress}`);
     };
 
     return (
