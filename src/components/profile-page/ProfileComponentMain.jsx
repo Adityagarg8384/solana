@@ -4,7 +4,7 @@ import CreatedCoursesSec from "./CreaedCoursesSec"
 import ProfileHeaderSecond from "./ProfileHdeaderSecond"
 import UpdateProfileAndNft from "./UpdateProfileAndNft"
 
-const ProfileComponentMain = () => {
+const ProfileComponentMain = ({user}) => {
     return (
         <div className="w-full bg-white text-black min-h-lvh pb-10 mt-8 flex gap-y-8 flex-col items-center">
         {/* <div className="w-full"><Navbar/></div> */}
@@ -18,7 +18,7 @@ const ProfileComponentMain = () => {
             <div className="flex justify-between w-10/12 max-w-[1440px] items-center gap-x-2">
                 <div className="w-6/12 max-w-[600px] flex flex-col gap-y-3">
                     {/* pass the fetched details to this component */}
-                    <UserCard />
+                    <UserCard user = {user} />
                     <TopEnrolledSec/>
                 </div>
                 <div className="w-6/12 max-w-[780px] place-self-start flex flex-col gap-y-10">
