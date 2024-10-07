@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/Navbar/navbar";
-import ProfileContextProvier from "@/context/ProfileContext";
+import ProfileContextProvider from "@/context/ProfileContext";
 import "@/styles/globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
@@ -18,9 +18,9 @@ export default function App({ Component, pageProps }) {
           height={4}
         />
         <Navbar />
-        <ProfileContextProvier>
+        <ProfileContextProvider>
           <Component {...pageProps} />
-        </ProfileContextProvier>;
+        </ProfileContextProvider>;
       </WalletProvider>
     </ConnectionProvider>
   </>
