@@ -7,7 +7,6 @@ import { PhantomWalletAdapter } from "@solana/wallet-adapter-phantom"; // or the
 import { clusterApiUrl } from "@solana/web3.js"; // Import this to specify the network
 
 const wallets = [new PhantomWalletAdapter()];
-
 export default function App({ Component, pageProps }) {
   const network = clusterApiUrl("devnet");
   return <>
