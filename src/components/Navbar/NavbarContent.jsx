@@ -8,6 +8,7 @@ import { NavOverlay } from './navigationOverlay';
 const NavbarContent = () => {
   const { connected, publicKey, disconnect } = useWallet();
   const router = useRouter();
+  
 
   
   const isNavbarBlue = !connected || router.pathname == '/' || router.pathname == '/mycourses';
